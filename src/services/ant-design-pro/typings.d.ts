@@ -11,9 +11,11 @@ declare namespace API {
     email?: string;
     signature?: string;
     title?: string;
+    grade?:string; //年级
     group?: string;
     major?:string; //专业
     college?:string; //学院
+    collegeCode?:string; //学院代号
     tags?: { key: string; label: string, id?:number }[];
     notifyCount?: number;
     unreadCount?: number;

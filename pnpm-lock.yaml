@@ -14,6 +14,9 @@ dependencies:
   '@ant-design/pro-components':
     specifier: ^2.3.57
     version: 2.3.57(antd@5.2.2)(prop-types@15.8.1)(rc-field-form@1.27.4)(react-dom@18.2.0)(react@18.2.0)
+  '@ant-design/pro-form':
+    specifier: ^2.13.11
+    version: 2.13.11(antd@5.2.2)(rc-field-form@1.27.4)(react-dom@18.2.0)(react@18.2.0)
   '@ant-design/use-emotion-css':
     specifier: 1.0.4
     version: 1.0.4(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
@@ -480,7 +483,7 @@ packages:
       '@chenshuai2144/sketch-color': 1.0.9(react@18.2.0)
       antd: 4.24.8(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       lodash.tonumber: 4.0.3
       omit.js: 2.0.2
       rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
@@ -504,7 +507,7 @@ packages:
       '@chenshuai2144/sketch-color': 1.0.9(react@18.2.0)
       antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       lodash.tonumber: 4.0.3
       omit.js: 2.0.2
       rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
@@ -513,6 +516,61 @@ packages:
     transitivePeerDependencies:
       - prop-types
       - react-dom
+
+  /@ant-design/pro-field@2.9.10(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-34m6+w5U9+kamaKG4jeIhCY0ua/bjpAqasqXYhTYYHUGLF22Uh2sxR4+u9p9ev3Uazx4Elb+/LY88M056hFKjA==}
+    peerDependencies:
+      antd: '>=4.23.0 || >=5.0.0'
+      react: '>=17.0.0'
+    dependencies:
+      '@ant-design/icons': 5.0.1(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-provider': 2.10.5(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-utils': 2.11.8(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
+      '@babel/runtime': 7.20.13
+      '@chenshuai2144/sketch-color': 1.0.9(react@18.2.0)
+      antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
+      classnames: 2.3.2
+      dayjs: 1.11.8
+      lodash.tonumber: 4.0.3
+      omit.js: 2.0.2
+      rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      swr: 2.0.3(react@18.2.0)
+    transitivePeerDependencies:
+      - react-dom
+    dev: false
+
+  /@ant-design/pro-form@2.13.11(antd@5.2.2)(rc-field-form@1.27.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Th80F4Bbx++vwquiLwvYZzuZS7f4QhYa5Mre03CJjYgpMuNBWdX9WLuQU2lf/rYx04/FTDMCkN1TeKtj4U9iuA==}
+    peerDependencies:
+      '@types/lodash.merge': ^4.6.7
+      antd: '>=4.23.0 || >=5.0.0'
+      rc-field-form: ^1.22.0
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    peerDependenciesMeta:
+      '@types/lodash.merge':
+        optional: true
+    dependencies:
+      '@ant-design/icons': 5.0.1(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-field': 2.9.10(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-provider': 2.10.5(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-utils': 2.11.8(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
+      '@babel/runtime': 7.20.13
+      '@chenshuai2144/sketch-color': 1.0.9(react@18.2.0)
+      '@umijs/use-params': 1.0.9(react@18.2.0)
+      antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
+      classnames: 2.3.2
+      lodash.merge: 4.6.2
+      omit.js: 2.0.2
+      rc-field-form: 1.27.4(react-dom@18.2.0)(react@18.2.0)
+      rc-resize-observer: 1.3.1(react-dom@18.2.0)(react@18.2.0)
+      rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      use-json-comparison: 1.0.6(react@18.2.0)
+      use-media-antd-query: 1.1.0(react@18.2.0)
+    dev: false
 
   /@ant-design/pro-form@2.5.8(antd@4.24.8)(prop-types@15.8.1)(rc-field-form@1.27.4)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-iBxb7vWOPjlkpfZjZHKnVlgA1ebE7yjuqkXJSQ9AYW2HB1UfXVYcI7xgrj0nkx6EdtL1sf3Rhl2OwKYpRIB9iQ==}
@@ -654,7 +712,7 @@ packages:
       '@babel/runtime': 7.20.13
       antd: 4.24.8(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       rc-resize-observer: 1.3.1(react-dom@18.2.0)(react@18.2.0)
       rc-util: 4.21.1
       react: 18.2.0
@@ -680,7 +738,7 @@ packages:
       '@babel/runtime': 7.20.13
       antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       rc-resize-observer: 1.3.1(react-dom@18.2.0)(react@18.2.0)
       rc-util: 4.21.1
       react: 18.2.0
@@ -690,6 +748,23 @@ packages:
       - '@types/lodash.merge'
       - prop-types
       - rc-field-form
+
+  /@ant-design/pro-provider@2.10.5(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ymEInaDM3wi9ImwaZK2mLuM87WiHmyx2K8W/5ByB7e5u+qwWon7kpuN9s59tMLK4A3ShNZTTl6WI+UE63cBxuA==}
+    peerDependencies:
+      antd: '>=4.23.0 || >=5.0.0'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@ant-design/cssinjs': 1.10.1(react-dom@18.2.0)(react@18.2.0)
+      '@babel/runtime': 7.20.13
+      '@ctrl/tinycolor': 3.6.0
+      antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
+      rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      swr: 2.0.3(react@18.2.0)
+    dev: false
 
   /@ant-design/pro-provider@2.4.3(antd@4.24.8)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-BefEAY9XUE1U5SxLAzA9se4e2VOykMRDyev+cGzz4bewdon/sbX82dcw300rl1n5IB9r+K3wYCzFXX+KaneFSA==}
@@ -768,7 +843,7 @@ packages:
       '@babel/runtime': 7.20.13
       antd: 4.24.8(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       omit.js: 2.0.2
       rc-field-form: 1.27.4(react-dom@18.2.0)(react@18.2.0)
       rc-resize-observer: 1.3.1(react-dom@18.2.0)(react@18.2.0)
@@ -799,7 +874,7 @@ packages:
       '@babel/runtime': 7.20.13
       antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       omit.js: 2.0.2
       rc-field-form: 1.27.4(react-dom@18.2.0)(react@18.2.0)
       rc-resize-observer: 1.3.1(react-dom@18.2.0)(react@18.2.0)
@@ -811,6 +886,25 @@ packages:
     transitivePeerDependencies:
       - '@types/lodash.merge'
       - prop-types
+
+  /@ant-design/pro-utils@2.11.8(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0tqQ6aKzIXzXvikXbx+LruWIgQUIN7Fyn5p5IlolaQ1qnXyT+mWxqKvtTpgw6ylGioSxXfOGu3ywI3SQDAisBQ==}
+    peerDependencies:
+      antd: '>=4.23.0 || >=5.0.0'
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    dependencies:
+      '@ant-design/icons': 5.0.1(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-provider': 2.10.5(antd@5.2.2)(react-dom@18.2.0)(react@18.2.0)
+      '@babel/runtime': 7.20.13
+      antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
+      classnames: 2.3.2
+      dayjs: 1.11.8
+      rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      swr: 2.0.3(react@18.2.0)
+    dev: false
 
   /@ant-design/pro-utils@2.5.8(antd@4.24.8)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-iAiNjKBj8chgDsHIn/d757RFEhRLhBPT4iSH5MI7k+hZTHbEMsjYjNgtR9Du5doIP+ACe62hcuELTr6aXt80nQ==}
@@ -824,7 +918,7 @@ packages:
       '@babel/runtime': 7.20.13
       antd: 4.24.8(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -846,7 +940,7 @@ packages:
       '@babel/runtime': 7.20.13
       antd: 5.2.2(moment@2.29.4)(react-dom@18.2.0)(react@18.2.0)
       classnames: 2.3.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -6402,7 +6496,7 @@ packages:
     dependencies:
       '@umijs/fabric': 2.14.1
       chalk: 4.1.2
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       glob: 7.2.3
       lodash: 4.17.21
       memoizee: 0.4.15
@@ -6439,10 +6533,10 @@ packages:
       '@ant-design/pro-components': 2.3.57(antd@5.2.2)(prop-types@15.8.1)(rc-field-form@1.27.4)(react-dom@18.2.0)(react@18.2.0)
       '@umijs/bundler-utils': 4.0.42
       '@umijs/valtio': 1.0.3(react@18.2.0)
-      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.7)
+      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.8)
       axios: 0.27.2
       babel-plugin-import: 1.13.6
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       dva-core: 2.0.4(redux@4.2.1)
       dva-immer: 1.0.0(dva@2.5.0-beta.2)
       dva-loading: 3.0.22(dva-core@2.0.4)
@@ -6484,10 +6578,10 @@ packages:
       '@tanstack/react-query-devtools': 4.24.9(@tanstack/react-query@4.24.9)(react-dom@18.2.0)(react@18.2.0)
       '@umijs/bundler-utils': 4.0.52
       '@umijs/valtio': 1.0.3(react@18.2.0)
-      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.7)
+      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.8)
       axios: 0.27.2
       babel-plugin-import: 1.13.6
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       dva-core: 2.0.4(redux@4.2.1)
       dva-immer: 1.0.0(dva@2.5.0-beta.2)
       dva-loading: 3.0.22(dva-core@2.0.4)
@@ -6532,10 +6626,10 @@ packages:
       '@tanstack/react-query-devtools': 4.24.9(@tanstack/react-query@4.24.9)(react-dom@18.2.0)(react@18.2.0)
       '@umijs/bundler-utils': 4.0.52
       '@umijs/valtio': 1.0.3(react@18.2.0)
-      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.7)
+      antd-dayjs-webpack-plugin: 1.0.6(dayjs@1.11.8)
       axios: 0.27.2
       babel-plugin-import: 1.13.6
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       dva-core: 2.0.4(redux@4.2.1)
       dva-immer: 1.0.0(dva@2.5.0-beta.2)
       dva-loading: 3.0.22(dva-core@2.0.4)
@@ -6957,7 +7051,7 @@ packages:
     dependencies:
       '@types/js-cookie': 2.2.7
       ahooks-v3-count: 1.0.0
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       intersection-observer: 0.12.2
       js-cookie: 2.2.1
       lodash: 4.17.21
@@ -7030,12 +7124,12 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /antd-dayjs-webpack-plugin@1.0.6(dayjs@1.11.7):
+  /antd-dayjs-webpack-plugin@1.0.6(dayjs@1.11.8):
     resolution: {integrity: sha512-UlK3BfA0iE2c5+Zz/Bd2iPAkT6cICtrKG4/swSik5MZweBHtgmu1aUQCHvICdiv39EAShdZy/edfP6mlkS/xXg==}
     peerDependencies:
       dayjs: '*'
     dependencies:
-      dayjs: 1.11.7
+      dayjs: 1.11.8
     dev: true
 
   /antd-mobile-alita@2.3.4(react-dom@18.2.0)(react@18.2.0):
@@ -8550,6 +8644,9 @@ packages:
 
   /dayjs@1.11.7:
     resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+
+  /dayjs@1.11.8:
+    resolution: {integrity: sha512-LcgxzFoWMEPO7ggRv1Y2N31hUf2R0Vj7fuy/m+Bg1K8rr+KAs1AEy4y9jd5DXe8pbHgX+srkHNS7TH6Q6ZhYeQ==}
 
   /debug@0.7.4:
     resolution: {integrity: sha512-EohAb3+DSHSGx8carOSKJe8G0ayV5/i609OD0J2orCkuyae7SyZSz2aoLmQF2s0Pj5gITDebwPH7GFBlqOUQ1Q==}
@@ -14859,7 +14956,7 @@ packages:
       '@babel/runtime': 7.20.13
       classnames: 2.3.2
       date-fns: 2.29.3
-      dayjs: 1.11.7
+      dayjs: 1.11.8
       moment: 2.29.4
       rc-trigger: 5.3.4(react-dom@18.2.0)(react@18.2.0)
       rc-util: 5.27.2(react-dom@18.2.0)(react@18.2.0)

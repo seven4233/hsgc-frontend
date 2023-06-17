@@ -26,6 +26,12 @@ export default [
     menu:false,
     component: './AccountCenter',
   },
+  {
+    path: '/account/settings',
+    name: '个人设置',
+    menu:false,
+    component: './AccountSettings',
+  },
   // { name: '查询表格', icon: 'table', path: '/list', component: './TableList' },
   { path: '/', redirect: '/welcome' },
   { path: '*', layout: false, component: './404' },

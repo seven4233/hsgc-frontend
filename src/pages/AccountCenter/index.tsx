@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { useModel } from '@umijs/max';
-import { PlusOutlined} from '@ant-design/icons';
+import { history, useModel, useRequest } from '@umijs/max';
+import { PlusOutlined,ArrowRightOutlined } from '@ant-design/icons';
 import styles from './index.less';
 import { GridContent } from '@ant-design/pro-components';
-import { Card, Divider, Row, Col, Input, Tag, Image, Space } from 'antd';
+import { Card, Divider, Row, Col, Input, Tag, Image, Space, Button } from 'antd';
 import { TagType, tabKeyType } from './data';
 import Articles from './components/Articles';
 
@@ -91,10 +91,18 @@ const TagList: React.FC<{ tags: API.CurrentUser['tags'] }> = ({ tags }) => {
 };
 
 const AccountCenter: React.FC = () => {
-  const { initialState } = useModel('@@initialState');
-  const { currentUser } = initialState || {};
+  const { initialState, setInitialState } = useModel('@@initialState');
+  const { currentUser, fetchUserInfo } = initialState || {};
+
   const [tabKey, setTabKey] = useState<tabKeyType>('articles');
 
+  useRequest(async () => {
+    let res = await fetchUserInfo!();
+    setInitialState({
+      ...initialState,
+      currentUser: res,
+    });
+  });
   // 渲染用户信息
   const renderUserInfo = ({ college, major, phone }: Partial<API.CurrentUser>) => {
     return (
@@ -120,8 +128,7 @@ const AccountCenter: React.FC = () => {
           </Space>
         </p>
         <p>
-       
-        <Space size={5}>
+          <Space size={5}>
             <Image
               width={20}
               preview={false}
@@ -157,7 +164,7 @@ const AccountCenter: React.FC = () => {
                 <div className={styles.avatarHolder}>
                   <img src={currentUser.avatar} alt="" />
                   <div className={styles.name}>{currentUser.username}</div>
-                  <div>{'我看到的不是风 而是整个世界'}</div>
+                  <div>{currentUser.signature}</div>
                 </div>
                 {renderUserInfo(currentUser)}
                 <Divider dashed />
@@ -165,7 +172,11 @@ const AccountCenter: React.FC = () => {
                 <Divider style={{ marginTop: 16 }} dashed />
 
                 <div className={styles.team}>
-                  <div className={styles.teamTitle}>团队</div>
+                  <div className={styles.teamTitle}>
+                    <Button onClick={()=>{
+                      history.push('/account/settings')
+                    }}   type='dashed' style={{color:'#1296db'}} icon={<ArrowRightOutlined />}>修改资料</Button>
+                  </div>
                   <Row gutter={36}></Row>
                 </div>
               </div>

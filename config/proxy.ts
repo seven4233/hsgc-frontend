@@ -21,6 +21,10 @@ export default {
       changeOrigin: true,
       pathRewrite:{'^/api': ''}
     },
+    '/hsjw/':{
+      target: 'https://jwmis.ncwu.edu.cn/hsjw/frame/droplist/getDropLists.action',
+      changeOrigin: true,
+    }
   },
  
 };

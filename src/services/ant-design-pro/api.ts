@@ -9,6 +9,7 @@ export async function currentUser(options?: { [key: string]: any }) {
     result: API.CurrentUser;
   }>('/api/user/currentUser', {
     method: 'GET',
+    
     ...(options || {}),
   });
 }
