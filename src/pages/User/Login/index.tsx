@@ -120,7 +120,7 @@ const Login: React.FC = () => {
             minWidth: 280,
             maxWidth: '75vw',
           }}
-          logo={<img alt="logo" src="/logo.svg" />}
+          logo={<img style={{transform: 'translateY(5px)'}} alt="logo" src="/logo.svg" />}
           title="华水共创空间"
           subTitle="华水共创空间，致力服务于每个划水人"
           initialValues={{
