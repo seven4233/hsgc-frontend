@@ -1,5 +1,5 @@
-import { Card, Form, Select, Row, Col, List, Button ,Tag} from 'antd';
-import { useRequest } from '@umijs/max';
+import { Card, Form, Select, Row, Col, List, Button, Tag, Input } from 'antd';
+import { useModel, useRequest } from '@umijs/max';
 import { queryFakeList } from './service';
 import StandardFormRow from './components/StandardFormRow';
 import TagSelect from './components/TagSelect';
@@ -15,29 +15,9 @@ const pageSize = 5;
 
 const Moment = () => {
   const [form] = Form.useForm();
+const {initialState} = useModel('@@initialState')
+const { currentUser} = initialState || {}
 
-  const owners = [
-    {
-      id: 'wzj',
-      name: '我自己',
-    },
-    {
-      id: 'wjh',
-      name: '吴家豪',
-    },
-    {
-      id: 'zxx',
-      name: '周星星',
-    },
-    {
-      id: 'zly',
-      name: '赵丽颖',
-    },
-    {
-      id: 'ym',
-      name: '姚明',
-    },
-  ];
   const { data, reload, loading, loadMore, loadingMore } = useRequest(
     () => {
       return queryFakeList({
@@ -49,14 +29,8 @@ const Moment = () => {
     },
   );
 
-  const setOwner = () => {
-    console.log(data?.list);
-    
-    form.setFieldsValue({
-      owner: ['wzj'],
-    });
-  };
-  
+
+
   const formItemLayout = {
     wrapperCol: {
       xs: { span: 24 },
@@ -73,21 +47,21 @@ const Moment = () => {
       case 'star-o':
         return (
           <span>
-            <StarOutlined style={{ marginRight: 8 }} />
+            <StarOutlined style={{ marginRight: 8, cursor: 'pointer' }} />
             {text}
           </span>
         );
       case 'like-o':
         return (
           <span>
-            <LikeOutlined style={{ marginRight: 8 }} />
+            <LikeOutlined style={{ marginRight: 8, cursor: 'pointer'}} />
             {text}
           </span>
         );
       case 'message':
         return (
           <span>
-            <MessageOutlined style={{ marginRight: 8 }} />
+            <MessageOutlined style={{ marginRight: 8, cursor: 'pointer' }} />
             {text}
           </span>
         );
@@ -111,39 +85,16 @@ const Moment = () => {
   );
 
   return (
-    
     <PageContainer>
       <Card bordered={false}>
-        <Form
-          layout="inline"
-          form={form}
-          initialValues={{ owner: ['wjh', 'zxx'] }}
-          onValuesChange={reload}
-        >
+        <Form layout="inline" form={form} onValuesChange={reload}>
           <StandardFormRow title="所属分类" block style={{ paddingBottom: 11 }}>
             <FormItem name={'category'}>
-              <TagSelect expandable>
-                <TagSelect.Option value={'cat1'}>分类1</TagSelect.Option>
-                <TagSelect.Option value={'cat2'}>分类2</TagSelect.Option>
-                <TagSelect.Option value={'cat3'}>分类3</TagSelect.Option>
-                <TagSelect.Option value={'cat4'}>分类4</TagSelect.Option>
+              <TagSelect>
+                <TagSelect.Option value={'cat1'}>最新</TagSelect.Option>
+                <TagSelect.Option value={'cat2'}>最热</TagSelect.Option>
               </TagSelect>
             </FormItem>
-          </StandardFormRow>
-
-          <StandardFormRow title="owner" grid>
-            <FormItem name="owner" noStyle>
-              <Select mode="multiple" placeholder="选择 owner">
-                {owners.map((owner) => (
-                  <Option key={owner.id} value={owner.id}>
-                    {owner.name}
-                  </Option>
-                ))}
-              </Select>
-            </FormItem>
-            <a  className={styles.selfTrigger} onClick={setOwner}>
-              只看自己的
-            </a>
           </StandardFormRow>
 
           <StandardFormRow title="其他选项" grid last>
@@ -183,27 +134,22 @@ const Moment = () => {
             <List.Item
               key={item.id}
               actions={[
-                <IconText key="star" type="star-o" text={item.star} />,
+                <IconText  key="star" type="star-o" text={item.star} />,
                 <IconText key="like" type="like-o" text={item.like} />,
                 <IconText key="message" type="message" text={item.message} />,
               ]}
               extra={<div className={styles.listItemExtra} />}
             >
               <List.Item.Meta
-                title={
-                  <a className={styles.listItemMetaTitle} href={item.href}>
-                    {item.title}
-                  </a>
-                }
-                description={
-                  <span>
-                    <Tag>Ant Design</Tag>
-                    <Tag>设计语言</Tag>
-                    <Tag>蚂蚁金服</Tag>
-                  </span>
-                }
+                // 描述标签
+                // description={
+                //   <span>
+                //     <Tag>设计语言</Tag>
+                //     <Tag>蚂蚁金服</Tag>
+                //   </span>
+                // }
               ></List.Item.Meta>
-                <ArticleListContent data={item} />
+              <ArticleListContent data={item} />
             </List.Item>
           )}
         ></List>

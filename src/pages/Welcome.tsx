@@ -114,7 +114,7 @@ const Welcome: React.FC = () => {
               color: token.colorTextHeading,
             }}
           >
-            欢迎使用 Ant Design Pro
+            欢迎来到 华水共创空间
           </div>
           <p
             style={{
@@ -126,8 +126,7 @@ const Welcome: React.FC = () => {
               width: '65%',
             }}
           >
-            Ant Design Pro 是一个整合了 umi，Ant Design 和 ProComponents
-            的脚手架方案。致力于在设计规范和基础组件的基础上，继续向上构建，提炼出典型模板/业务组件/配套设计资源，进一步提升企业级中后台产品设计研发过程中的『用户』和『设计者』的体验。
+            华水共创空间（Hua Shui Co-Creating Space）是一个创新性的、多功能的共享办公空间，为创业者、企业家和自由职业者提供一个包容、灵活和激励的工作环境。位于一个便利的城市中心地区，华水共创空间致力于打造一个创新社区，促进知识共享、合作和创业精神的蓬勃发展。
           </p>
           <div
             style={{
@@ -138,11 +137,11 @@ const Welcome: React.FC = () => {
           >
             <InfoCard
               index={1}
-              href="https://umijs.org/docs/introduce/introduce"
-              title="了解 umi"
-              desc="umi 是一个可扩展的企业级前端应用框架,umi 以路由为基础的，同时支持配置式路由和约定式路由，保证路由的功能完备，并以此进行功能扩展。"
+              href="https://ncwu.edu.cn"
+              title="了解 NCWU"
+              desc="华北水利水电大学(North China University of Water Resources and Electric Power)建有花园校区（河南省郑州市北环路36号，占地面积555亩）、龙子湖校区（河南省郑州市金水东路136号，占地面积1780亩）和江淮校区（河南省信阳市罗山县龙池大道236号，占地面积1500亩），是水利部与河南省共建、以河南省管理为主的高校，是河南省特色骨干大学，是全国首批硕士学位授予权单位、首批中西部高校基础能力建设工程高校、首批具有海外留学生招生资格高校、教育部卓越工程师教育培养计划高校，是教育部确定的“金砖国家网络大学”中方高校牵头单位。学校起源自1951年创建于北京的中央人民政府水利部水利学校，1954年更名为水利部北京水利学校。1958年北京水力发电学校、北京水力发电函授学院并入，成立北京水利水电学院。1969年迁至河北省磁县岳城水库办学，1971年更名为河北水利水电学院。1977年迁至河北省邯郸市办学，1978年更名为华北水利水电学院。1990年迁至河南省郑州市办学，2000年由水利部主管划转河南省管理，实行省部共建。2009年水利部与河南省政府签署共建华北水利水电学院战略协议。2013年更名为华北水利水电大学。2021年入选河南省“双一流”学科创建高校。"
             />
-            <InfoCard
+            {/* <InfoCard
               index={2}
               title="了解 ant design"
               href="https://ant.design"
@@ -153,7 +152,7 @@ const Welcome: React.FC = () => {
               title="了解 Pro Components"
               href="https://procomponents.ant.design"
               desc="ProComponents 是一个基于 Ant Design 做了更高抽象的模板组件，以 一个组件就是一个页面为开发理念，为中后台开发带来更好的体验。"
-            />
+            /> */}
           </div>
         </div>
       </Card>

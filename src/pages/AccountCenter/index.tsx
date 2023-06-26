@@ -114,7 +114,7 @@ const AccountCenter: React.FC = () => {
               preview={false}
               src="https://cdn.huashui666.com/static/images/%E7%94%B5%E8%AF%9D.png"
             />
-            {phone}
+            {phone || "未设置"}
           </Space>
         </p>
         <p>
@@ -124,7 +124,7 @@ const AccountCenter: React.FC = () => {
               preview={false}
               src="https://cdn.huashui666.com/static/images/college.png"
             />
-            {college}
+            {(college && college.slice(4)) || "未设置"}
           </Space>
         </p>
         <p>
@@ -134,7 +134,7 @@ const AccountCenter: React.FC = () => {
               preview={false}
               src="https://cdn.huashui666.com/static/images/%E4%B8%93%E4%B8%9A%E6%8E%92%E5%90%8D.png"
             />
-            {major}
+            {(major && major.slice(6)) || "未设置"}
           </Space>
         </p>
       </div>
